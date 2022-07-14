@@ -4,8 +4,9 @@ import Home from "./Home";
 import NavBar from "./Navbar";
 import NotFound from "./NotFound";
 import {useState} from "react";
-import {Route, Routes, Link} from "react-router-dom";
+import {Route, Routes, Navigate} from "react-router-dom";
 import ProductPage from "./ProductPage";
+import Profile from "./Profile";
 
 
 const AppWrapper = styled.div`
@@ -21,7 +22,7 @@ const LoginButton = styled.button`
   position: absolute;
   top: 20px;
   width: 200px;
-  padding: 40px;
+  padding: 20px;
   border-radius: 20px;
   height: 50px;
   right: 10%;
@@ -81,7 +82,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home products={productsArray} handleClick={handleClick} />} />
             <Route path="/about/:id" element={<ProductPage product={productsArray[id]} />} />
-            <Route path="" element={<NotFound />} />
+            <Route path="/profile" element={isAuth ? <Profile/> : <Navigate to="/" /> }/>
+            <Route path="*" element={<NotFound />} />
+
           </Routes>
           <LoginButton className={`link ${ isAuth ? "logined": ''}`} onClick={handleLogin}>Login</LoginButton>
       </AppWrapper>
