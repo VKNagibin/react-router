@@ -1,0 +1,31 @@
+@import "assets/fonts/FuturaPTMedium.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'FuturaPTWebMedium';
+}
+
+body {
+  padding: 20px;
+}
+
+.link {
+  width: 250px;
+  text-align: center;
+  color: blueviolet;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: .3s;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(121, 121, 121, .2);
+}
+
+.link:hover {
+  background: white;
+  border: 2px solid rgba(121, 121, 121, .2);
+}
+
