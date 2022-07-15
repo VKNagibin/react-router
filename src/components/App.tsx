@@ -84,7 +84,6 @@ function App() {
             <Route path="/about/:id" element={<ProductPage product={productsArray[id]} />} />
             <Route path="/profile" element={isAuth ? <Profile/> : <Navigate to="/" /> }/>
             <Route path="*" element={<NotFound />} />
-
           </Routes>
           <LoginButton className={`link ${ isAuth ? "logined": ''}`} onClick={handleLogin}>Login</LoginButton>
       </AppWrapper>

@@ -15,9 +15,11 @@ const Navigation = styled.nav`
 `
 
 const NavBar = () => {
+    let activeClassName = "active";
+
     return (
         <Navigation>
-            <NavLink to="/" className="link" >Home</NavLink>
+            <NavLink to="/" className={ (props ) => props.isActive ? "link " + activeClassName : "link"}>Home</NavLink>
             <NavLink to="/fsdgdg" className="link">Blog</NavLink>
             <NavLink to="/profile" className="link">Profile</NavLink>
         </Navigation>

@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'FuturaPTWebMedium';
+  font-family: 'FuturaPTWebMedium', sans-serif;
 }
 
 body {
@@ -16,7 +16,7 @@ body {
   box-sizing: content-box;
   text-align: center;
   color: blueviolet;
-  border: 2px solid white;
+  border: 10px solid white;
   cursor: pointer;
   transition: .3s;
   text-decoration: none;
@@ -27,6 +27,10 @@ body {
 
 .link:hover {
   background: white;
-  border: 2px solid rgba(121, 121, 121, .2);
+  border: 10px solid rgba(121, 121, 121, .2);
+}
+
+.active {
+  border: 10px solid blueviolet;
 }
 
